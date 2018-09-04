@@ -2,6 +2,17 @@
 
 Find the closest free point to an occupied point on a ROS map, taking the robot's radius into account.
 
+## Usage
+
+```python
+from FreePointFinder import FreePointFinder
+fpf = FreePointFinder('example_map.yaml')
+fpf.is_free(1, 1) # returns True
+fpf.is_free(2, -2) # returns False
+fpf.closest_free_point(2, -2) # returns (1.8, -1.2)
+fpf.closest_free_point(50, 50) # returns (None, None)
+```
+
 ## Options
 
 ```python
